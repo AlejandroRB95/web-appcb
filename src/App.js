@@ -30,6 +30,12 @@ function App({ signOut, user }) {
       ? `${(size / (1024 * 1024)).toFixed(2)} MB`
       : `${(size / 1024).toFixed(2)} KB`;
   };
+const params = {
+  Bucket: 'basearchivof25d0-dev',
+  Key: 'public/public/CloudTeamFolder/miarchivo.txt',  // Ruta correcta
+  Body: archivo,
+  ContentType: 'text/plain'
+};
 
   // 📌 Subir archivos
   const uploadFile = async (file) => {
